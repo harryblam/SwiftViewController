@@ -9,15 +9,15 @@
 import UIKit
 import Foundation
 
-typealias TableViewCellConfigureBlock = (cell:UITableViewCell, item:AnyObject?) -> ()
+typealias TableViewCellConfigureBlock = (cell:UITableViewCell, item:ExampleObject?) -> ()
 
 class TableViewDataSource: NSObject, UITableViewDataSource {
     
-    var items:NSArray = []
+    var items = [ExampleObject]()
     var itemIdentifier:String?
     var configureCellBlock:TableViewCellConfigureBlock?
     
-    init(items: NSArray, cellIdentifier: String, configureBlock: TableViewCellConfigureBlock) {
+    init(items: [ExampleObject], cellIdentifier: String, configureBlock: TableViewCellConfigureBlock) {
         self.items = items
         self.itemIdentifier = cellIdentifier
         self.configureCellBlock = configureBlock
@@ -30,7 +30,7 @@ class TableViewDataSource: NSObject, UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(self.itemIdentifier!, forIndexPath: indexPath) as! UITableViewCell
-        let item: AnyObject = self.itemAtIndexPath(indexPath)
+        let item: ExampleObject = self.itemAtIndexPath(indexPath)
         
         if (self.configureCellBlock != nil) {
             self.configureCellBlock!(cell: cell, item: item)
@@ -39,7 +39,7 @@ class TableViewDataSource: NSObject, UITableViewDataSource {
         return cell
     }
     
-    func itemAtIndexPath(indexPath: NSIndexPath) -> AnyObject {
+    func itemAtIndexPath(indexPath: NSIndexPath) -> ExampleObject {
         return self.items[indexPath.row]
     }
     
