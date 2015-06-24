@@ -24,13 +24,11 @@ class ViewController: UIViewController {
         self.exampleItems.append(ExampleObject(title: "Hello World"))
         
         //Init our datasource and setup the closure to handle our cell
-        //modify 'AnyObject' to match your model
         self.dataSource = TableViewDataSource(items: exampleItems, cellIdentifier: "Cell", configureBlock: { (cell, item) -> () in
             if let actualCell = cell as? ExampleUITableViewCell {
-//                if let actualItem = item as? ExampleObject {
-//                    actualCell.configureForItem(actualItem?)
-//                }
-                actualCell.configureForItem(item!)
+                if let actualItem = item as ExampleObject! {
+                    actualCell.configureForItem(actualItem)
+                }
             }
         })
         
