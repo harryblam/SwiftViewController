@@ -8,9 +8,17 @@
 
 import Foundation
 
-struct ExampleObject {
+class ExampleObject : NSObject, NSCoding {
     
     let title : String
+    
+    @objc required init(coder aDecoder: NSCoder) {
+        title = aDecoder.decodeObjectForKey("title") as! String
+    }
+    
+    @objc func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeObject(title, forKey: "title")
+    }
     
     init(title: String){
         self.title = title

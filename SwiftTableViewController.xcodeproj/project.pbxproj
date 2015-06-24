@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B0BDE9421B3AF467004452AF /* ExampleData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B0BDE9401B3AF467004452AF /* ExampleData.xcdatamodeld */; };
 		B0BF12D61B34233F001A0AFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BF12D51B34233F001A0AFA /* AppDelegate.swift */; };
 		B0BF12D81B34233F001A0AFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BF12D71B34233F001A0AFA /* ViewController.swift */; };
 		B0BF12DB1B34233F001A0AFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0BF12D91B34233F001A0AFA /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B0BDE9411B3AF467004452AF /* ExampleData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExampleData.xcdatamodel; sourceTree = "<group>"; };
 		B0BF12D01B34233F001A0AFA /* SwiftTableViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTableViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0BF12D41B34233F001A0AFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0BF12D51B34233F001A0AFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				B0BF12DC1B34233F001A0AFA /* Images.xcassets */,
 				B0BF12DE1B34233F001A0AFA /* LaunchScreen.xib */,
 				B0BF12D31B34233F001A0AFA /* Supporting Files */,
+				B0BDE9401B3AF467004452AF /* ExampleData.xcdatamodeld */,
 			);
 			path = SwiftTableViewController;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				B0BF12D81B34233F001A0AFA /* ViewController.swift in Sources */,
 				B0BF12F81B3427AC001A0AFA /* ExampleUITableViewCell.swift in Sources */,
 				B0BF12FA1B3429A5001A0AFA /* ExampleObject.swift in Sources */,
+				B0BDE9421B3AF467004452AF /* ExampleData.xcdatamodeld in Sources */,
 				B0BF12D61B34233F001A0AFA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,6 +425,7 @@
 				B0BF12F11B34233F001A0AFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B0BF12F21B34233F001A0AFA /* Build configuration list for PBXNativeTarget "SwiftTableViewControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -429,8 +434,22 @@
 				B0BF12F41B34233F001A0AFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B0BDE9401B3AF467004452AF /* ExampleData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B0BDE9411B3AF467004452AF /* ExampleData.xcdatamodel */,
+			);
+			currentVersion = B0BDE9411B3AF467004452AF /* ExampleData.xcdatamodel */;
+			path = ExampleData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B0BF12C81B34233F001A0AFA /* Project object */;
 }
