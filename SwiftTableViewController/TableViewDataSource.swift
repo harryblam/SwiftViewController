@@ -13,12 +13,14 @@ typealias TableViewCellConfigureBlock = (cell:UITableViewCell, item:ExampleObjec
 
 class TableViewDataSource: NSObject, UITableViewDataSource {
     
-    var items = [ExampleObject]()
+    var items: [ExampleObject]
     var itemIdentifier:String?
     var configureCellBlock:TableViewCellConfigureBlock?
     
-    init(items: [ExampleObject], cellIdentifier: String, configureBlock: TableViewCellConfigureBlock) {
-        self.items = items
+    init(cellIdentifier: String, configureBlock: TableViewCellConfigureBlock) {
+        
+        self.items = CoreDataController.fetchExampleObjects()
+        
         self.itemIdentifier = cellIdentifier
         self.configureCellBlock = configureBlock
         super.init()

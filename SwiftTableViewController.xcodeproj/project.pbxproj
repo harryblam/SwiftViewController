@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B06698A31B43FFA2007B7E43 /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06698A21B43FFA2007B7E43 /* CoreDataController.swift */; };
 		B0BDE9421B3AF467004452AF /* ExampleData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B0BDE9401B3AF467004452AF /* ExampleData.xcdatamodeld */; };
 		B0BF12D61B34233F001A0AFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BF12D51B34233F001A0AFA /* AppDelegate.swift */; };
 		B0BF12D81B34233F001A0AFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BF12D71B34233F001A0AFA /* ViewController.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B06698A21B43FFA2007B7E43 /* CoreDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
 		B0BDE9411B3AF467004452AF /* ExampleData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExampleData.xcdatamodel; sourceTree = "<group>"; };
 		B0BF12D01B34233F001A0AFA /* SwiftTableViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTableViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0BF12D41B34233F001A0AFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				B0BF12F51B342376001A0AFA /* TableViewDataSource.swift */,
 				B0BF12F71B3427AC001A0AFA /* ExampleUITableViewCell.swift */,
 				B0BF12F91B3429A5001A0AFA /* ExampleObject.swift */,
+				B06698A21B43FFA2007B7E43 /* CoreDataController.swift */,
 				B0BF12D91B34233F001A0AFA /* Main.storyboard */,
 				B0BF12DC1B34233F001A0AFA /* Images.xcassets */,
 				B0BF12DE1B34233F001A0AFA /* LaunchScreen.xib */,
@@ -227,6 +230,7 @@
 				B0BF12F61B342376001A0AFA /* TableViewDataSource.swift in Sources */,
 				B0BF12D81B34233F001A0AFA /* ViewController.swift in Sources */,
 				B0BF12F81B3427AC001A0AFA /* ExampleUITableViewCell.swift in Sources */,
+				B06698A31B43FFA2007B7E43 /* CoreDataController.swift in Sources */,
 				B0BF12FA1B3429A5001A0AFA /* ExampleObject.swift in Sources */,
 				B0BDE9421B3AF467004452AF /* ExampleData.xcdatamodeld in Sources */,
 				B0BF12D61B34233F001A0AFA /* AppDelegate.swift in Sources */,

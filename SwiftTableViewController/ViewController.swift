@@ -29,12 +29,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var exampleItems: [ExampleObject] = [ExampleObject]()
-        exampleItems.append(ExampleObject(title: "Hello World"))
-
-        
         //Init our datasource and setup the closure to handle our cell
-        self.dataSource = TableViewDataSource(items: exampleItems, cellIdentifier: "Cell", configureBlock: { (cell, item) -> () in
+        self.dataSource = TableViewDataSource(cellIdentifier: "Cell", configureBlock: { (cell, item) -> () in
             if let actualCell = cell as? ExampleUITableViewCell {
                 if let actualItem = item as ExampleObject! {
                     actualCell.configureForItem(actualItem)
@@ -58,7 +54,12 @@ class ViewController: UIViewController {
             style: .Default) { (action: UIAlertAction!) -> Void in
                 
                 let textField = alert.textFields![0] as! UITextField
-                self.dataSource?.items.append(ExampleObject(title: textField.text))
+                
+                let obj = ExampleObject(title: textField.text)
+                
+                self.dataSource?.items.append(obj)
+                CoreDataController.saveExampleObject(obj)
+                
                 self.tableView.reloadData()
         }
         
