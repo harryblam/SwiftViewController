@@ -11,13 +11,13 @@ import UIKit
 class ViewController: UIViewController {
 
     //Example array to represent data set
-    var exampleItems: [ExampleObject] = [ExampleObject]() {
-        didSet {
-            let hasItems = exampleItems.count > 0
-            self.tableView.hidden = !hasItems
-            self.messageLabel.hidden = hasItems
-        }
-    }
+//    var exampleItems: [ExampleObject] = [ExampleObject]() {
+//        didSet {
+//            let hasItems = exampleItems.count > 0
+//            self.tableView.hidden = !hasItems
+//            self.messageLabel.hidden = hasItems
+//        }
+//    }
     
     //variable to hold reference to the datasource
     var dataSource:TableViewDataSource?
@@ -29,8 +29,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //self.exampleItems.removeAll(keepCapacity: false)
-        //self.exampleItems.append(ExampleObject(title: "Hello World"))
+        var exampleItems: [ExampleObject] = [ExampleObject]()
+        exampleItems.append(ExampleObject(title: "Hello World"))
 
         
         //Init our datasource and setup the closure to handle our cell
@@ -58,7 +58,7 @@ class ViewController: UIViewController {
             style: .Default) { (action: UIAlertAction!) -> Void in
                 
                 let textField = alert.textFields![0] as! UITextField
-                self.exampleItems.append(ExampleObject(title: textField.text))
+                self.dataSource?.items.append(ExampleObject(title: textField.text))
                 self.tableView.reloadData()
         }
         
