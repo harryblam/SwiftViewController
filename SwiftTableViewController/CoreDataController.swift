@@ -55,14 +55,20 @@ class CoreDataController {
         managedContext.executeFetchRequest(fetchRequest,
             error: &error) as? [NSManagedObject]
         
-        var people = []
         var exampleObjects = [ExampleObject]()
         
         if let results = fetchedResults {
             
             //change array of nsmanagedobjects to array of ExampleObjects
+            for obj in results {
+                let title = obj.valueForKey("title") as? String
+                
+                let exObj = ExampleObject(title: title!)
+                
+                exampleObjects.append(exObj)
+                
+            }
             
-            people = results
         } else {
             println("Could not fetch \(error), \(error!.userInfo)")
         }
